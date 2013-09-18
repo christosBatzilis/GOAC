@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="230dp"
+    android:layout_height="230dp"
+	android:background="@android:color/darker_gray"
+	android:layout_gravity="center"
+	android:orientation="vertical"
+	android:paddingLeft="10dp"
+	android:paddingRight="10dp"
+    >
+  
+    <TextView 
+        android:id="@+id/select_deletion_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_deletion_name_title" 
+        android:textSize="20sp"
+        android:layout_alignParentLeft="true"  
+        android:textColor="@android:color/white"
+        />
+    <View
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:background="@android:color/white"
+	android:layout_marginTop="5dp"
+    android:layout_below="@id/select_deletion_title"
+    />
+
+ <EditText 
+     android:id="@+id/deletion_name_edit_text"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     android:hint="@string/deletion_name"
+     android:layout_centerInParent="true"
+     />
+
+
+	  <View
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:background="@android:color/white"
+    android:layout_marginBottom="5dp"
+    android:layout_above="@+id/ok_button"
+    />
+		<Button
+	    android:id="@id/ok_button"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:paddingLeft="20dp"
+	    android:paddingRight="20dp"
+	    android:text="@string/ok" 
+	    android:layout_centerHorizontal="true"
+	    android:layout_alignParentBottom="true"
+	    
+	     />
+
+</RelativeLayout>

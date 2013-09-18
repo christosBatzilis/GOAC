@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:background="@color/android_dark_red" android:state_focused="true" android:text="@string/cancel" android:textColor="@android:color/white"/>
+    <item android:background="@color/android_light_red" android:state_pressed="true" android:text="@string/cancel" android:textColor="@android:color/white"/>
+    <item android:background="@color/android_dark_red" android:text="@string/cancel" android:textColor="@android:color/white"/>
+
+</selector>

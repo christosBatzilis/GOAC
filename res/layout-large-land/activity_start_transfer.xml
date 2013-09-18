@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".StartTransfer" >
+
+    <View
+        android:id="@+id/center_line"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#FF0000FF" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/endpoint_list_1"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/select_endpoint_A_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/textView1"
+        android:layout_alignRight="@id/center_line"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/textView1"
+        android:background="#00000000"
+        android:onClick="startEndpointList"
+        android:text="@string/select_endpoint_prompt"
+        android:textColor="@color/custom_blue"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/delete_A_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/select_endpoint_A_button"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/create_folder_A_button"
+        android:background="@drawable/button_delete"
+        android:onClick="deleteFiles" />
+
+    <Button
+        android:id="@id/create_folder_A_button"
+        android:layout_width="38dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@id/delete_A_button"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/back_A_button"
+        android:background="@drawable/button_new_folder"
+        android:onClick="createNewFolder" />
+
+    <Button
+        android:id="@id/back_A_button"
+        android:layout_width="38dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@id/delete_A_button"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/refresh_A_button"
+        android:background="@drawable/button_back"
+        android:contentDescription="@string/back"
+        android:onClick="goBack" />
+
+    <Button
+        android:id="@id/refresh_A_button"
+        android:layout_width="34dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@id/delete_A_button"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/button_refresh"
+        android:contentDescription="@string/refresh"
+        android:onClick="refresh" />
+
+    <TextView
+        android:id="@+id/path_A"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@id/textView1"
+        android:layout_alignRight="@id/center_line"
+        android:layout_below="@id/delete_A_button"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/path_placeholder"
+        android:textColor="@color/text_color"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@id/transfer_A_to_B_button"
+        android:layout_width="53dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@id/delete_A_button"
+        android:layout_below="@id/delete_A_button"
+        android:layout_centerHorizontal="true"
+        android:layout_toLeftOf="@id/center_line"
+        android:background="@drawable/down"
+        android:onClick="makeTransfer" />
+
+    <ListView
+        android:id="@+id/endpoint_A_list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/path_A"
+        android:layout_toLeftOf="@id/center_line"
+        android:background="@drawable/border"
+        android:padding="8dp" />
+
+    <ProgressBar
+        android:id="@+id/endpoints_A_directory_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/endpoint_A_list_view"
+        android:layout_marginTop="70dp"
+        android:layout_toRightOf="@id/create_folder_A_button"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/transfer_B_to_A_button"
+        android:layout_width="53dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@id/delete_B_button"
+        android:layout_below="@+id/delete_B_button"
+        android:layout_toRightOf="@id/center_line"
+        android:background="@drawable/up"
+        android:onClick="makeTransfer" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/center_line"
+        android:text="@string/endpoint_list_2"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/select_endpoint_B_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/textView2"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/textView2"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/textView2"
+        android:background="#00000000"
+        android:onClick="startEndpointList"
+        android:text="@string/select_endpoint_prompt"
+        android:textColor="@color/custom_blue"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/back_B_button"
+        android:layout_width="38dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@id/delete_B_button"
+        android:layout_marginLeft="15dp"
+        android:layout_toLeftOf="@+id/create_folder_B_button"
+        android:background="@drawable/button_back"
+        android:contentDescription="@string/back"
+        android:onClick="goBack" />
+
+    <Button
+        android:id="@id/create_folder_B_button"
+        android:layout_width="38dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@id/delete_B_button"
+        android:layout_marginLeft="15dp"
+        android:layout_toLeftOf="@id/delete_B_button"
+        android:background="@drawable/button_new_folder"
+        android:onClick="createNewFolder" />
+
+    <Button
+        android:id="@id/delete_B_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/select_endpoint_B_button"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_delete"
+        android:onClick="deleteFiles" />
+
+    <Button
+        android:id="@+id/refresh_B_button"
+        android:layout_width="34dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@id/delete_B_button"
+        android:layout_toLeftOf="@id/back_B_button"
+        android:background="@drawable/button_refresh"
+        android:contentDescription="@string/refresh"
+        android:onClick="refresh" />
+
+    <ListView
+        android:id="@+id/endpoint_B_list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignLeft="@id/path_B"
+        android:layout_below="@id/path_B"
+        android:background="@drawable/border"
+        android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/path_B"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@id/textView2"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/delete_B_button"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/path_placeholder"
+        android:textColor="@color/text_color"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/loading_endpoints_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/loading_endpoints"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/endpoints_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loading_endpoints_textview"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/endpoints_B_directory_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/refresh_B_button"
+        android:layout_alignTop="@id/endpoint_B_list_view"
+        android:layout_marginTop="70dp"
+        android:visibility="gone" />
+
+</RelativeLayout>

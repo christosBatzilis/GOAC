@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/darker_gray"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/activate_title_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/activate_endpoint"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <View
+                android:id="@+id/top_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/activate_title_id"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/white" />
+			
+            <LinearLayout
+                android:id="@+id/linear"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_below="@id/top_line"
+               
+                 >
+                
+                
+                
+            </LinearLayout>
+            <View
+                android:id="@+id/view1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/linear"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/white" />
+			
+       
+
+
+            <Button
+                android:id="@+id/ok_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view1"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/authenticate" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

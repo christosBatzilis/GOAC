@@ -1,0 +1,159 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".StartTransfer" >
+
+ 
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/endpoint_list_1" />
+
+  	<LinearLayout
+  	    android:layout_width="fill_parent"
+  	    android:layout_height="wrap_content"
+  	    android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/select_endpoint_A_button"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:text="@string/select_endpoint_prompt" />
+        <ImageButton
+            android:id="@+id/back_A_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/back"
+           	android:background="@drawable/button_back"
+           	android:layout_gravity="center"
+            android:onClick="goBack"
+           
+            />
+        <Button
+            android:id="@+id/delete_A_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_new_folder"
+            android:onClick="createNewFolder"
+            />
+        
+        
+              </LinearLayout>
+        <ListView 
+            android:id="@+id/endpoint_A_list_view"
+            android:layout_width="fill_parent"
+            android:layout_height="155dp"
+           	android:background="@drawable/border"
+           	android:padding="4dp"
+           />
+       <ProgressBar
+            android:id="@+id/endpoints_A_directory_progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="38dp"
+            android:layout_marginBottom="39dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+             />
+
+   
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/endpoint_list_2" />
+	<LinearLayout
+  	    android:layout_width="fill_parent"
+  	    android:layout_height="wrap_content"
+  	    android:orientation="horizontal" 
+  	    android:gravity="center"
+  	    android:paddingBottom="5dp">
+        <Button
+            android:id="@+id/select_endpoint_B_button"
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:layout_height="wrap_content"
+            android:text="@string/select_endpoint_prompt" />
+          <ImageButton
+            android:id="@+id/back_B_button"
+            android:layout_width="0dp"
+            android:layout_height="18dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/back"
+           	android:background="@drawable/button_back"
+          
+            android:onClick="goBack"
+            android:layout_marginRight="8dp"
+            />
+              <Button
+            android:id="@+id/delete_B_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="18dp"
+            android:background="@drawable/button_new_folder"
+            android:onClick="createNewFolder"
+            android:layout_marginRight="5dp"
+            />
+              <Button
+           
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="18dp"
+            android:background="@drawable/button_delete"
+            android:onClick="deleteFiles"
+            />
+              
+              
+        </LinearLayout>
+          <ListView 
+            android:id="@+id/endpoint_B_list_view"
+            android:layout_width="fill_parent"
+            android:layout_height="155dp"
+            android:padding="10dip"
+           	android:background="@drawable/border"
+           />
+                <ProgressBar
+            android:id="@+id/endpoints_B_directory_progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+             android:layout_marginTop="38dp"
+            android:layout_marginBottom="39dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+             />
+   
+
+    <LinearLayout
+        android:id="@+id/loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="gone" 
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/loading_endpoints_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loading_endpoints" />
+
+        <ProgressBar
+            android:id="@+id/endpoints_progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left" />
+    </LinearLayout>
+
+</LinearLayout>

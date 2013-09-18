@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="260dp"
+    android:layout_height="270dp"
+    android:layout_gravity="center"
+    android:background="@android:color/darker_gray"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp" >
+
+    <TextView
+        android:id="@+id/settings_title_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="@string/settings_title"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <View
+        android:id="@+id/top_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/settings_title_id"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/white" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/ok_button"
+        android:layout_marginBottom="5dp"
+        android:background="@android:color/white" />
+
+    <Button
+        android:id="@id/ok_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/ok" />
+
+    <TextView
+        android:id="@+id/number_of_tasks_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_line"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/number_of_tasks"
+        android:textColor="@android:color/black" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/number_of_tasks_title"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radio_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/ten" />
+
+        <RadioButton
+            android:id="@+id/radio_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/twenty" />
+
+        <RadioButton
+            android:id="@+id/radio_50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fifty" />
+
+        <RadioButton
+            android:id="@+id/radio_100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hundred" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/status_of_tasks_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroup1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="@string/status_of_tasks"
+        android:textColor="@android:color/black" />
+
+      <CheckBox
+        android:id="@+id/checkBox_succeeded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/status_of_tasks_title"
+        android:layout_alignParentLeft="true"
+        android:text="@string/succeeded"
+        android:checked="true"
+         />
+
+      
+    <CheckBox
+        android:id="@+id/checkBox_failed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"   
+      	android:layout_toRightOf="@id/checkBox_succeeded"
+        android:layout_alignBottom="@id/checkBox_succeeded"
+        android:text="@string/failed" 
+         android:checked="true"
+        />
+    
+      <CheckBox
+        android:id="@+id/checkBox_active"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/checkBox_succeeded"
+        android:layout_above="@id/view1"
+       android:layout_below="@id/checkBox_succeeded"
+        android:text="@string/active" 
+         android:checked="true"
+        />
+
+
+
+    <CheckBox
+        android:id="@+id/checkBox_inactive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/checkBox_failed"
+        android:layout_alignBottom="@id/checkBox_active"
+        android:text="@string/inactive"
+         android:layout_below="@id/checkBox_succeeded"
+         android:checked="true"
+         />
+
+</RelativeLayout>

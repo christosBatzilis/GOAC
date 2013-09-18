@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MonitorActivity" >
+
+    <TextView
+        android:id="@+id/monitor_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_toLeftOf="@+id/refresh_tasks_button"
+        android:text="@string/task_monitoring"
+        android:textColor="@color/text_color"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@id/refresh_tasks_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/refresh_tasks"
+        android:onClick="refresh" />
+
+    <View
+        android:id="@+id/monitor_center_line2"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/monitor_title"
+        android:background="@color/android_light_blue" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/monitor_center_line2"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="27dp"
+        android:text="@string/status"
+        android:textColor="@android:color/white"
+        android:textSize="27sp" />
+
+    <TextView
+        android:id="@+id/task_id_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/monitor_center_line2"
+        android:layout_toRightOf="@id/status"
+        android:text="@string/label"
+        android:textColor="@android:color/white"
+        android:textSize="27sp" />
+
+    <TextView
+        android:id="@+id/progress_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/monitor_center_line2"
+        android:layout_alignParentRight="true"
+        android:text="@string/progress"
+        android:textColor="@android:color/white"
+        android:textSize="27sp" />
+
+    <ListView
+        android:id="@+id/tasks_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/monitor_center_line2"
+        android:padding="5dp" />
+
+    <ProgressBar
+        android:id="@+id/loading_tasks_progress_bar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/loading_tasks_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loading_tasks_progress_bar"
+        android:layout_centerHorizontal="true"
+        android:text="@string/loading_tasks"
+        android:textSize="27sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

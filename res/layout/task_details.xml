@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/darker_gray"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/settings_title_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/transfer_details"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <View
+                android:id="@+id/top_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/settings_title_id"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/cancel_task_button"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/white" />
+
+            <ImageView
+                android:id="@+id/status_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/top_line"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:contentDescription="@string/status"
+                android:src="@drawable/completed" />
+
+            <TextView
+                android:id="@+id/type_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignTop="@id/status_image"
+                android:text="@string/type_"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/type_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/type_title"
+                android:layout_toRightOf="@id/type_title"
+                android:text="@string/dash"
+                android:textColor="@android:color/white" />
+            <TextView
+                android:id="@+id/label_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/type_title"
+                android:text="@string/label_"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/label_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/label_title"
+                android:layout_toRightOf="@id/label_title"
+                android:text="@string/dash"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/status_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/label_value"
+                android:text="@string/status_"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/status_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/status_title"
+                android:layout_toRightOf="@id/status_title"
+                android:text="@string/dash"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/id_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/status_value"
+                android:text="@string/taskid_"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/id_value_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/id_title"
+                android:layout_toRightOf="@id/id_title"
+                android:text="@string/dash"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/origin_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/id_value_1"
+                android:text="@string/origin_"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/origin_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/origin_title"
+                android:layout_toRightOf="@id/origin_title"
+                android:text="@string/dash"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/destination_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/origin_value"
+                android:text="@string/destination_"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/destination_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/destination_title"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@id/destination_title"
+                android:text="@string/dash"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/time_information"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/destination_value"
+                android:text="@string/time_info"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/time_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/time_information"
+                android:layout_marginBottom="5dp"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:id="@+id/request_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/time_line"
+                android:text="@string/request_"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/request_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/request_title"
+                android:layout_toRightOf="@id/request_title"
+                android:text="@string/dash"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/deadline_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/request_value"
+                android:text="@string/deadline_"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/deadline_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/deadline_title"
+                android:layout_toRightOf="@id/deadline_title"
+                android:text="@string/dash"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/completion_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/deadline_value"
+                android:text="@string/completion_"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/completion_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/completion_title"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@id/completion_title"
+                android:text="@string/dash"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/task_statistics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/completion_value"
+                android:text="@string/task_stats"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/stats_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/task_statistics"
+                android:layout_marginBottom="5dp"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:id="@+id/pending_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/stats_line"
+                android:layout_marginBottom="5dp"
+                android:text="@string/pending_"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/pending_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/stats_line"
+                android:layout_toRightOf="@id/pending_title"
+                android:text="@string/dash"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/succeeded_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/stats_line"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/pending_value"
+                android:text="@string/succeeded_"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/succeeded_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/succeeded_title"
+                android:layout_toRightOf="@id/succeeded_title"
+                android:text="@string/dash"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/cancelled_title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/stats_line"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/succeeded_value"
+                android:text="@string/cancelled_"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cancelled_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/stats_line"
+                android:layout_toRightOf="@id/cancelled_title1"
+                android:text="@string/dash"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/expired_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/pending_title"
+                android:text="@string/expired_"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/expired_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/expired_title"
+                android:layout_toRightOf="@id/expired_title"
+                android:text="@string/dash"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/failed_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/succeeded_title"
+                android:layout_below="@id/succeeded_title"
+                android:layout_marginBottom="5dp"
+                android:text="@string/failed_"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/failed_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/failed_title"
+                android:layout_toRightOf="@id/failed_title"
+                android:text="@string/dash"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/retrying_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/expired_title"
+                android:layout_alignLeft="@id/cancelled_title1"
+                android:layout_toRightOf="@id/failed_value"
+                android:text="@string/retrying_"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/retrying_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/expired_title"
+                android:layout_toRightOf="@id/retrying_title"
+                android:text="@string/dash"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/skipped_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/failed_title"
+                android:text="@string/skipped_"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/skipped_value1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/skipped_title"
+                android:layout_toRightOf="@id/skipped_title"
+                android:text="@string/dash"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/cancel_task_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:textColor="@android:color/white"
+                android:background="@color/android_dark_red"
+                android:layout_below="@id/skipped_title"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                 />
+
+            <Button
+                android:id="@id/ok_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view1"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/ok" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>
